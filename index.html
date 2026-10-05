@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Batagor. | Website Edukasi Batagor</title>
+
+<!-- Google Fonts: Fraunces untuk judul (hangat, ala toko kue), Nunito Sans untuk isi teks -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+<!-- Memanggil file CSS eksternal -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       HEADER: logo, navigasi, tombol ganti bahasa
+  ========================================================= -->
+  <header class="site-header">
+    <div class="logo">Batagor<span class="logo-dot">.</span></div>
+
+    <nav class="main-nav" id="mainNav">
+      <button class="nav-link active" data-page="beranda" data-id="Beranda" data-en="Home">Beranda</button>
+      <button class="nav-link" data-page="sejarah" data-id="Pengertian" data-en="Definition">Pengertian</button>
+      <button class="nav-link" data-page="jenis" data-id="Jenis" data-en="Types">Jenis</button>
+      <button class="nav-link" data-page="cara-bikin" data-id="Cara Bikin" data-en="How to Make">Cara Bikin</button>
+      <button class="nav-link" data-page="quiz" data-id="Kuis" data-en="Quiz">Kuis</button>
+      <button class="nav-link" data-page="tentang-kami" data-id="Tentang Kami" data-en="About Us">Tentang Kami</button>
+      <button class="nav-link" data-page="kontak" data-id="Kontak" data-en="Contact">Kontak</button>
+    </nav>
+
+    <div class="header-right">
+      <button id="langToggle" class="lang-toggle" type="button" aria-label="Ganti Bahasa / Switch Language">
+        <span id="langId" class="lang-option active">ID</span>
+        <span class="lang-sep">|</span>
+        <span id="langEn" class="lang-option">EN</span>
+      </button>
+      <button id="hamburger" class="hamburger" type="button" aria-label="Buka menu" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =========================================================
+         HALAMAN BERANDA: hero + 3 card pratinjau
+    ========================================================= -->
+    <section id="beranda" class="page active">
+      <div class="hero">
+        <div class="hero-inner">
+          <img class="hero-ornament" src="images/ornamen.svg" alt="" aria-hidden="true">
+          <h1 data-content-key="homeTitle" data-id="Selamat Datang di Dunia Batagor!" data-en="Welcome to the World of Batagor!">Selamat Datang di Dunia Batagor!</h1>
+          <p data-content-key="homeIntro" data-id="Jelajahi pengertian, sejarah, jenis, hingga cara membuat Batagor, jajanan gurih khas Bandung yang kini digemari di banyak kota." data-en="Explore the meaning, history, types, and how to make Batagor, Bandung's savory snack now loved in many cities.">Jelajahi pengertian, sejarah, jenis, hingga cara membuat Batagor, jajanan gurih khas Bandung yang kini digemari di banyak kota.</p>
+          <button class="btn-primary" data-page="sejarah" data-id="Pelajari Pengertiannya" data-en="Learn the Definition">Pelajari Pengertiannya</button>
+        </div>
+      </div>
+
+      <div class="section-inner">
+        <div class="card-grid">
+
+          <article class="preview-card" data-page="sejarah">
+            <img src="images/batagor3.jpeg" alt="Sejarah Batagor" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;">
+            <h3 data-id="Pengertian & Sejarah" data-en="Definition & History">Pengertian & Sejarah</h3>
+            <p data-id="Cari tahu arti nama Batagor dan bagaimana camilan legendaris ini pertama kali muncul di Bandung." data-en="Find out what the name Batagor means and how this legendary snack first appeared in Bandung.">Cari tahu arti nama Batagor dan bagaimana camilan legendaris ini pertama kali muncul di Bandung.</p>
+            <span class="card-link" data-id="Baca selengkapnya" data-en="Read more">Baca selengkapnya</span>
+          </article>
+
+          <article class="preview-card" data-page="jenis">
+            <img src="images/batagor.jpeg" alt="Ragam Batagor" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;">
+            <h3 data-id="Jenis Batagor" data-en="Types of Batagor">Jenis Batagor</h3>
+            <p data-id="Dari yang digoreng garing sampai yang berkuah hangat, kenali berbagai variasi Batagor di sini." data-en="From crispy fried to warm and soupy, get to know Batagor's many variations here.">Dari yang digoreng garing sampai yang berkuah hangat, kenali berbagai variasi Batagor di sini.</p>
+            <span class="card-link" data-id="Lihat jenisnya" data-en="See the types">Lihat jenisnya</span>
+          </article>
+
+          <article class="preview-card" data-page="cara-bikin">
+            <img src="images/batagor2.jpeg" alt="Resep Batagor" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;">
+            <h3 data-id="Cara Bikin" data-en="How to Make">Cara Bikin</h3>
+            <p data-id="Ingin membuat Batagor sendiri di rumah? Ikuti tahapan resep yang dibagi langkah demi langkah." data-en="Want to make your own Batagor at home? Follow the recipe broken down step by step.">Ingin membuat Batagor sendiri di rumah? Ikuti tahapan resep yang dibagi langkah demi langkah.</p>
+            <span class="card-link" data-id="Mulai memasak" data-en="Start cooking">Mulai memasak</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         HALAMAN PENGERTIAN & SEJARAH
+         Bergaya poster "About / History": latar cokelat tua tebal,
+         judul tulisan tangan, foto tumpang tindih, dan linimasa.
+         Tetap SATU section yang sama, hanya disusun dua blok.
+    ========================================================= -->
+    <section id="sejarah" class="page">
+
+      <!-- Pita dekoratif pojok, murni hiasan -->
+      <svg class="corner-ribbon" viewBox="0 0 260 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0,0 L260,0 Q120,75 0,45 Z" fill="#F1E1C4" opacity="0.15"></path>
+        <path d="M0,0 L190,0 Q95,55 0,28 Z" fill="#C6874A" opacity="0.3"></path>
+      </svg>
+
+      <!-- Blok 1: Tentang Batagor (foto kiri, teks kanan) -->
+      <div class="sejarah-about-inner">
+        <div class="about-media" style="max-width: 380px;">
+          <img src="images/batagor4.jpeg" alt="Batagor Siap Saji" style="width: 100%; height: 350px; object-fit: cover; border-radius: 15px; transform: rotate(-3deg); box-shadow: 0 6px 20px rgba(0,0,0,0.2);">
+          <img src="images/sauss_kacang.jpeg" alt="Saus Kacang" style="position: absolute; bottom: -15px; right: -20px; width: 180px; height: 130px; object-fit: cover; border-radius: 12px; transform: rotate(4deg); box-shadow: 0 12px 26px rgba(0,0,0,0.4); border: 4px solid #FBF3E4;">
+        </div>
+        <div class="about-text">
+          <h2 class="script-heading" data-content-key="aboutTitle" data-id="Tentang Batagor" data-en="About Batagor">Tentang Batagor</h2>
+          <p data-content-key="aboutIntro" data-id="Batagor adalah singkatan dari Bakso Tahu Goreng. Camilan ini terbuat dari tahu yang diisi adonan ikan tenggiri, digoreng hingga garing, lalu disajikan bersama saus kacang kental, kecap manis, dan perasan jeruk limau." data-en="Batagor stands for Bakso Tahu Goreng, or Fried Tofu Fish Ball. It is made from tofu filled with mackerel fish paste, deep-fried until crispy, then served with thick peanut sauce, sweet soy sauce, and a squeeze of lime.">Batagor adalah singkatan dari Bakso Tahu Goreng. Camilan ini terbuat dari tahu yang diisi adonan ikan tenggiri, digoreng hingga garing, lalu disajikan bersama saus kacang kental, kecap manis, dan perasan jeruk limau.</p>
+        </div>
+      </div>
+
+      <!-- Blok 2: Sejarah Batagor (teks kiri, linimasa kanan) -->
+      <div class="sejarah-history-inner">
+        <div class="history-text">
+          <h2 class="script-heading" data-content-key="historyTitle" data-id="Sejarah Batagor" data-en="Batagor History">Sejarah Batagor</h2>
+          <p data-content-key="historyIntro" data-id="Batagor pertama kali muncul di Bandung, Jawa Barat, sekitar akhir tahun 1970-an. Camilan ini tercipta dari kreativitas pedagang bakso tahu yang menggoreng dagangan yang tidak habis terjual agar bisa disajikan kembali keesokan harinya." data-en="Batagor first appeared in Bandung, West Java, around the late 1970s. It was created by tofu fish ball vendors who fried their unsold stock so it could be served again the next day.">Batagor pertama kali muncul di Bandung, Jawa Barat, sekitar akhir tahun 1970-an. Camilan ini tercipta dari kreativitas pedagang bakso tahu yang menggoreng dagangan yang tidak habis terjual agar bisa disajikan kembali keesokan harinya.</p>
+          <p data-id="Ternyata versi goreng ini justru lebih gurih dan renyah dibanding versi rebusnya, sehingga cepat digemari dan mulai dijajakan berkeliling kota dengan gerobak dorong maupun sepeda." data-en="It turned out the fried version tasted even richer and crispier than the boiled original, so it quickly became popular and started being sold around the city from push carts and bicycles.">Ternyata versi goreng ini justru lebih gurih dan renyah dibanding versi rebusnya, sehingga cepat digemari dan mulai dijajakan berkeliling kota dengan gerobak dorong maupun sepeda.</p>
+          <p data-id="Dari sekadar jajanan kaki lima, kini Batagor telah menjadi salah satu camilan khas Indonesia yang paling dikenal, hadir dalam berbagai variasi, dan terus digemari lintas generasi." data-en="From a humble street snack, Batagor has grown into one of Indonesia's most recognized specialty snacks, now available in many variations and loved across generations.">Dari sekadar jajanan kaki lima, kini Batagor telah menjadi salah satu camilan khas Indonesia yang paling dikenal, hadir dalam berbagai variasi, dan terus digemari lintas generasi.</p>
+        </div>
+
+        <div class="history-timeline">
+          <div class="timeline-badge">
+            <div class="badge-circle" aria-hidden="true">🥟</div>
+            <span class="badge-year" data-id="~ Akhir 1970-an" data-en="~ Late 1970s">~ Akhir 1970-an</span>
+          </div>
+
+          <div class="timeline-track">
+            <div class="timeline-node">
+              <div class="node-circle" aria-hidden="true">🛵</div>
+              <div>
+                <span class="node-label" data-id="1980-an" data-en="1980s">1980-an</span>
+                <p class="node-desc" data-id="Menyebar dari gerobak ke gerobak di seluruh Bandung." data-en="Spread from cart to cart across Bandung.">Menyebar dari gerobak ke gerobak di seluruh Bandung.</p>
+              </div>
+            </div>
+            <div class="timeline-node">
+              <div class="node-circle" aria-hidden="true">🏙️</div>
+              <div>
+                <span class="node-label" data-id="1990-an" data-en="1990s">1990-an</span>
+                <p class="node-desc" data-id="Mulai dijual di berbagai kota besar di Indonesia." data-en="Started being sold in major cities across Indonesia.">Mulai dijual di berbagai kota besar di Indonesia.</p>
+              </div>
+            </div>
+            <div class="timeline-node">
+              <div class="node-circle" aria-hidden="true">✨</div>
+              <div>
+                <span class="node-label" data-id="2000-an" data-en="2000s">2000-an</span>
+                <p class="node-desc" data-id="Menjadi jajanan favorit nasional dengan banyak variasi baru." data-en="Became a favorite national snack with many new variations.">Menjadi jajanan favorit nasional dengan banyak variasi baru.</p>
+              </div>
+            </div>
+            <div class="timeline-node">
+              <div class="node-circle" aria-hidden="true">🌏</div>
+              <div>
+                <span class="node-label" data-id="Kini" data-en="Today">Kini</span>
+                <p class="node-desc" data-id="Batagor mendunia lewat restoran dan konten kuliner daring." data-en="Batagor goes global through restaurants and online food content.">Batagor mendunia lewat restoran dan konten kuliner daring.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         HALAMAN JENIS BATAGOR
+         Atas: 1 varian utama (gambar besar + teks)
+         Bawah: kontainer overflow-x:auto berisi varian lain
+    ========================================================= -->
+    <section id="jenis" class="page">
+      <div class="section-inner">
+        <h2 class="page-title" data-id="Jenis-Jenis Batagor" data-en="Types of Batagor">Jenis-Jenis Batagor</h2>
+
+        <div class="jenis-top">
+          <div class="jenis-top-media" style="display: flex; justify-content: center; align-items: flex-start;">
+            <img src="images/original.jpeg" alt="Batagor Goreng Klasik" style="width: 100%; max-width: 240px; height: auto; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.1);">
+          </div>
+          <div class="jenis-top-text">
+            <h3 data-id="Batagor Goreng (Original)" data-en="Fried Batagor (Original)">Batagor Goreng (Original)</h3>
+            <p data-id="Versi paling klasik dan paling banyak dicari. Tahu, kulit pangsit, dan siomay ikan digoreng kering hingga renyah keemasan, lalu disiram saus kacang kental dan kecap manis. Biasanya disantap dengan tambahan perasan jeruk limau dan sambal." data-en="The most classic and popular version. Tofu, wonton skin, and fish dumplings are deep-fried until golden and crispy, then topped with thick peanut sauce and sweet soy sauce, usually finished with a squeeze of lime and chili sauce.">Versi paling klasik dan paling banyak dicari. Tahu, kulit pangsit, dan siomay ikan digoreng kering hingga renyah keemasan, lalu disiram saus kacang kental dan kecap manis. Biasanya disantap dengan tambahan perasan jeruk limau dan sambal.</p>
+          </div>
+        </div>
+
+        <h3 class="sub-title" data-id="Varian Lainnya" data-en="Other Variants">Varian Lainnya</h3>
+        <p class="scroll-hint" data-id="Geser ke samping untuk melihat varian lainnya." data-en="Swipe sideways to see more variants.">Geser ke samping untuk melihat varian lainnya.</p>
+
+        <div class="variant-scroll">
+
+          <div class="variant-card">
+            <img src="images/kuah.jpeg" alt="Batagor Kuah" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 0.85rem;">
+            <h4 data-id="Batagor Kuah" data-en="Batagor Kuah (Soupy)">Batagor Kuah</h4>
+            <p data-id="Disajikan dalam kuah kaldu hangat berbumbu, mirip mi kocok. Cocok dinikmati saat cuaca dingin." data-en="Served in a warm, seasoned savory broth, similar to mi kocok. Perfect for cold weather.">Disajikan dalam kuah kaldu hangat berbumbu, mirip mi kocok. Cocok dinikmati saat cuaca dingin.</p>
+          </div>
+
+          <div class="variant-card">
+            <img src="images/bakar.jpeg" alt="Batagor Bakar" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 0.85rem;">
+            <h4 data-id="Batagor Bakar" data-en="Grilled Batagor">Batagor Bakar</h4>
+            <p data-id="Alternatif yang lebih rendah minyak, dipanggang di atas bara hingga sedikit gosong dan beraroma smoky." data-en="A lower-oil alternative, grilled over charcoal until slightly charred with a smoky aroma.">Alternatif yang lebih rendah minyak, dipanggang di atas bara hingga sedikit gosong dan beraroma smoky.</p>
+          </div>
+
+          <div class="variant-card">
+            <img src="images/puyuh.jpeg" alt="Batagor Telur Puyuh" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 0.85rem;">
+            <h4 data-id="Batagor Isi Telur Puyuh" data-en="Batagor with Quail Egg">Batagor Isi Telur Puyuh</h4>
+            <p data-id="Diberi tambahan telur puyuh di dalam adonan untuk tekstur dan rasa yang lebih kaya." data-en="Filled with an added quail egg for a richer texture and flavor.">Diberi tambahan telur puyuh di dalam adonan untuk tekstur dan rasa yang lebih kaya.</p>
+          </div>
+
+          <div class="variant-card">
+            <img src="images/kering_pedas.jpeg" alt="Batagor Kering Pedas" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 0.85rem;">
+            <h4 data-id="Batagor Kering Pedas" data-en="Spicy Dry Batagor">Batagor Kering Pedas</h4>
+            <p data-id="Setelah digoreng, dilumuri bubuk cabai kering ala jajanan kekinian yang pedas dan gurih." data-en="After frying, coated with dry chili powder for a spicy, savory, modern snack twist.">Setelah digoreng, dilumuri bubuk cabai kering ala jajanan kekinian yang pedas dan gurih.</p>
+          </div>
+
+          <div class="variant-card">
+            <img src="images/kuah_kari.jpeg" alt="Batagor Kuah Kari" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 0.85rem;">
+            <h4 data-id="Batagor Kuah Kari" data-en="Curry Batagor">Batagor Kuah Kari</h4>
+            <p data-id="Variasi kuah dengan tambahan bumbu kari dan santan, memberi rasa gurih yang lebih kaya rempah." data-en="A soup variation with added curry spices and coconut milk, giving a richer, more fragrant savory flavor.">Variasi kuah dengan tambahan bumbu kari dan santan, memberi rasa gurih yang lebih kaya rempah.</p>
+          </div>
+
+          <div class="variant-card">
+            <img src="images/mini.jpeg" alt="Batagor Mini" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 0.85rem;">
+            <h4 data-id="Batagor Mini" data-en="Mini Batagor">Batagor Mini</h4>
+            <p data-id="Dibuat dalam ukuran kecil seperti cocktail, cocok sebagai camilan pesta atau teman arisan." data-en="Made in small, bite-sized portions like cocktail snacks, perfect for parties or casual gatherings.">Dibuat dalam ukuran kecil seperti cocktail, cocok sebagai camilan pesta atau teman arisan.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         HALAMAN CARA BIKIN
+         Fase 1: pilih resep -> Fase 2: grid langkah -> Fase 3: modal detail
+    ========================================================= -->
+    <section id="cara-bikin" class="page">
+      <div class="section-inner">
+        <h2 class="page-title" data-id="Cara Membuat Batagor" data-en="How to Make Batagor">Cara Membuat Batagor</h2>
+
+        <!-- ---- FASE 1: pilih resep ---- -->
+        <div id="faseResep">
+          <p class="section-intro" data-id="Pilih salah satu resep di bawah ini untuk melihat tahapan pembuatannya." data-en="Choose one of the recipes below to see its preparation steps.">Pilih salah satu resep di bawah ini untuk melihat tahapan pembuatannya.</p>
+
+          <div class="recipe-select-row">
+            <article class="recipe-card" data-recipe="tenggiri">
+              <img src="images/ikan.jpeg" alt="Ikan Tenggiri" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;">
+              <h3 data-id="Resep Tenggiri" data-en="Mackerel Recipe">Resep Tenggiri</h3>
+              <p data-id="Isian klasik menggunakan ikan tenggiri segar." data-en="The classic filling using fresh mackerel fish.">Isian klasik menggunakan ikan tenggiri segar.</p>
+              <span class="card-link" data-id="Lihat tahapannya" data-en="See the steps">Lihat tahapannya</span>
+            </article>
+
+            <article class="recipe-card" data-recipe="ayam">
+              <img src="images/ayam.jpeg" alt="Daging Ayam" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;">
+              <h3 data-id="Resep Ayam" data-en="Chicken Recipe">Resep Ayam</h3>
+              <p data-id="Alternatif isian tanpa ikan, cocok untuk yang tidak menyukai seafood." data-en="A fish-free filling alternative, great for those who don't like seafood.">Alternatif isian tanpa ikan, cocok untuk yang tidak menyukai seafood.</p>
+              <span class="card-link" data-id="Lihat tahapannya" data-en="See the steps">Lihat tahapannya</span>
+            </article>
+
+            <article class="recipe-card" data-recipe="saus-kacang">
+              <img src="images/saos_kacang.jpeg" alt="Saus Kacang" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;">
+              <h3 data-id="Resep Saus Kacang" data-en="Peanut Sauce Recipe">Resep Saus Kacang</h3>
+              <p data-id="Saus pelengkap wajib yang membuat Batagor semakin gurih dan nikmat." data-en="The essential companion sauce that makes Batagor even more savory and delicious.">Saus pelengkap wajib yang membuat Batagor semakin gurih dan nikmat.</p>
+              <span class="card-link" data-id="Lihat tahapannya" data-en="See the steps">Lihat tahapannya</span>
+            </article>
+          </div>
+        </div>
+
+        <!-- ---- FASE 2: grid langkah (disembunyikan sampai resep dipilih) ---- -->
+        <div id="faseLangkah" class="hidden">
+          <button id="btnKembaliResep" class="btn-kembali" data-id="Kembali" data-en="Back">Kembali</button>
+          <h3 id="langkahRecipeTitle" class="step-phase-title"></h3>
+          <div id="stepGrid" class="step-grid"><!-- kartu langkah diisi lewat JavaScript --></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="page">
+      <div class="section-inner quiz-section">
+        <h2 class="page-title" data-id="Seberapa Kenal Kamu dengan Batagor?" data-en="How Well Do You Know Batagor?">Seberapa Kenal Kamu dengan Batagor?</h2>
+        <p class="section-intro" data-id="Jawab 5 pertanyaan singkat tentang Batagor dan lihat skormu." data-en="Answer 5 quick questions about Batagor and see your score.">Jawab 5 pertanyaan singkat tentang Batagor dan lihat skormu.</p>
+
+        <div class="quiz-panel">
+          <div id="quizIntro" class="quiz-state">
+            <span class="quiz-mark" aria-hidden="true">?</span>
+            <h3 data-id="Siap menguji pengetahuanmu?" data-en="Ready to test your knowledge?">Siap menguji pengetahuanmu?</h3>
+            <p data-id="Kuis ini terdiri dari 5 soal pilihan ganda. Semoga berhasil!" data-en="This quiz has 5 multiple-choice questions. Good luck!">Kuis ini terdiri dari 5 soal pilihan ganda. Semoga berhasil!</p>
+            <button id="quizStart" class="btn-primary" type="button" data-id="Mulai Kuis" data-en="Start Quiz">Mulai Kuis</button>
+          </div>
+
+          <div id="quizQuestion" class="quiz-state hidden" aria-live="polite">
+            <div class="quiz-progress-row">
+              <span id="quizProgress"></span>
+              <span id="quizScore"></span>
+            </div>
+            <div class="quiz-progress-track"><span id="quizProgressFill"></span></div>
+            <h3 id="quizQuestionText"></h3>
+            <div id="quizOptions" class="quiz-options"></div>
+            <p id="quizFeedback" class="quiz-feedback" role="status"></p>
+            <button id="quizNext" class="btn-primary hidden" type="button"></button>
+          </div>
+
+          <div id="quizResult" class="quiz-state hidden" aria-live="polite">
+            <span class="quiz-mark quiz-result-mark" aria-hidden="true">!</span>
+            <p class="quiz-result-label" data-id="Skor Akhir" data-en="Final Score">Skor Akhir</p>
+            <h3 id="quizFinalScore"></h3>
+            <p id="quizResultMessage"></p>
+            <button id="quizRestart" class="btn-primary" type="button" data-id="Main Lagi" data-en="Play Again">Main Lagi</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         HALAMAN TENTANG KAMI
+    ========================================================= -->
+    <section id="tentang-kami" class="page">
+      <div class="section-inner">
+        <h2 class="page-title" style="text-align: center;" data-id="Tim di Balik Layar" data-en="The Team Behind the Screen">Tim di Balik Layar</h2>
+        <p style="text-align: center; color: var(--clr-text-soft); max-width: 700px; margin: -1.5rem auto 3rem;" data-id="Proyek website edukasi Batagor ini dikembangkan oleh mahasiswa S1 Teknik Informatika Universitas Tarumanagara sebagai pemenuhan tugas UTS Pemrograman Web." data-en="This Batagor educational website project was developed by undergraduate Computer Science students of Tarumanagara University for a Web Programming midterm project.">Proyek website edukasi Batagor ini dikembangkan oleh mahasiswa S1 Teknik Informatika Universitas Tarumanagara sebagai pemenuhan tugas UTS Pemrograman Web.</p>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+          <article class="preview-card" style="text-align: center; padding: 1.5rem 1rem;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;" aria-hidden="true">👨🏻‍💻</div>
+            <h3 style="margin-top: 0; font-size: 1.15rem;">Andrian</h3>
+            <p style="font-size: 0.9rem; margin: 0; color: var(--clr-text-soft);">Mahasiswa Teknik Informatika</p>
+          </article>
+
+          <article class="preview-card" style="text-align: center; padding: 1.5rem 1rem;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;" aria-hidden="true">👩🏻‍💻</div>
+            <h3 style="margin-top: 0; font-size: 1.15rem;">Diana</h3>
+            <p style="font-size: 0.9rem; margin: 0; color: var(--clr-text-soft);">Mahasiswi Teknik Informatika</p>
+          </article>
+          
+          <article class="preview-card" style="text-align: center; padding: 1.5rem 1rem;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;" aria-hidden="true">👨🏻‍💻</div>
+            <h3 style="margin-top: 0; font-size: 1.15rem;">Ivan</h3>
+            <p style="font-size: 0.9rem; margin: 0; color: var(--clr-text-soft);">Mahasiswa Teknik Informatika</p>
+          </article>
+          
+          <article class="preview-card" style="text-align: center; padding: 1.5rem 1rem;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;" aria-hidden="true">👨🏻‍💻</div>
+            <h3 style="margin-top: 0; font-size: 1.15rem;">Kenny</h3>
+            <p style="font-size: 0.9rem; margin: 0; color: var(--clr-text-soft);">Mahasiswa Teknik Informatika</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         HALAMAN KONTAK & KRITIK SARAN
+    ========================================================= -->
+    <section id="kontak" class="page">
+      <div class="section-inner" style="max-width: 900px; text-align: center;">
+        <h2 class="page-title" data-id="Hubungi Kami" data-en="Contact Us">Hubungi Kami</h2>
+        <p style="color: var(--clr-text-soft); margin-top: -1.5rem; margin-bottom: 3rem;" data-id="Punya pertanyaan, kritik, atau saran untuk pengembangan website ini? Silakan hubungi kami!" data-en="Have questions, feedback, or suggestions for this website? Please reach out to us!">Punya pertanyaan, kritik, atau saran untuk pengembangan website ini? Silakan hubungi kami!</p>
+
+        <!-- Grid 2 Kolom (Kiri Sosmed, Kanan Form) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; text-align: left;">
+          
+          <!-- KOLOM KIRI: Jalur Cepat (Sosmed) -->
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--clr-accent-dark);" data-id="Jalur Cepat" data-en="Quick Links">Jalur Cepat</h3>
+            
+            <a href="https://wa.me/6281234567890?text=Halo%20tim%20Batagor!" target="_blank" class="preview-card" style="display: flex; align-items: center; gap: 1.25rem; text-decoration: none; padding: 1.25rem;">
+              <div style="font-size: 2rem;" aria-hidden="true">💬</div>
+              <div>
+                <h4 style="margin: 0; font-size: 1.1rem; color: var(--clr-text);">WhatsApp</h4>
+                <p style="margin: 0; font-size: 0.85rem; color: var(--clr-text-soft);">Chat dengan admin</p>
+              </div>
+            </a>
+
+            <a href="https://instagram.com/batagor.edu" target="_blank" class="preview-card" style="display: flex; align-items: center; gap: 1.25rem; text-decoration: none; padding: 1.25rem;">
+              <div style="font-size: 2rem;" aria-hidden="true">📸</div>
+              <div>
+                <h4 style="margin: 0; font-size: 1.1rem; color: var(--clr-text);">Instagram</h4>
+                <p style="margin: 0; font-size: 0.85rem; color: var(--clr-text-soft);">@batagor.edu</p>
+              </div>
+            </a>
+
+            <a href="mailto:halo@batagor-edu.id" class="preview-card" style="display: flex; align-items: center; gap: 1.25rem; text-decoration: none; padding: 1.25rem;">
+              <div style="font-size: 2rem;" aria-hidden="true">✉️</div>
+              <div>
+                <h4 style="margin: 0; font-size: 1.1rem; color: var(--clr-text);">Email</h4>
+                <p style="margin: 0; font-size: 0.85rem; color: var(--clr-text-soft);">halo@batagor-edu.id</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- KOLOM KANAN: Form Kritik & Saran -->
+          <div style="background: var(--clr-card); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--clr-border); box-shadow: var(--shadow-soft);">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1.5rem; color: var(--clr-accent-dark);" data-id="Kritik & Saran" data-en="Feedback & Suggestions">Kritik & Saran</h3>
+            
+            <!-- Trik onsubmit agar form tidak me-refresh halaman saat dites dosen -->
+            <form onsubmit="alert(document.documentElement.lang === 'id' ? 'Terima kasih! Kritik dan saran kamu berhasil dikirim.' : 'Thank you! Your feedback has been sent.'); return false;" style="display: flex; flex-direction: column; gap: 1.25rem;">
+              
+              <div>
+                <label style="font-weight: 700; font-size: 0.9rem; color: var(--clr-text);" data-id="Nama Anda" data-en="Your Name">Nama Anda</label>
+                <input type="text" placeholder="Masukkan nama..." required style="width: 100%; padding: 0.85rem; border-radius: 8px; border: 1px solid var(--clr-border); margin-top: 0.4rem; font-family: inherit; background: #FFF; outline-color: var(--clr-accent);">
+              </div>
+              
+              <div>
+                <label style="font-weight: 700; font-size: 0.9rem; color: var(--clr-text);" data-id="Tulis Kritik & Saran" data-en="Write Feedback">Tulis Kritik & Saran</label>
+                <textarea rows="5" placeholder="Ketik pesan Anda di sini..." required style="width: 100%; padding: 0.85rem; border-radius: 8px; border: 1px solid var(--clr-border); margin-top: 0.4rem; font-family: inherit; background: #FFF; resize: vertical; outline-color: var(--clr-accent);"></textarea>
+              </div>
+              
+              <button type="submit" class="btn-primary" style="margin-top: 0.5rem; font-size: 1rem;" data-id="Kirim Pesan" data-en="Send Message">Kirim Pesan</button>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ---- FASE 3: modal detail langkah (di luar <main> supaya menutup seluruh layar) ---- -->
+  <div id="stepModalOverlay" class="modal-overlay">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalStepTitle">
+      <button id="modalClose" class="modal-close" type="button" aria-label="Tutup">&times;</button>
+      <h3 id="modalStepTitle"></h3>
+      <p id="modalStepDetail"></p>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+  <footer class="site-footer">
+    <p data-id="© 2026 Batagor. Seluruh hak cipta dilindungi." data-en="© 2026 Batagor. All rights reserved.">© 2026 Batagor. Seluruh hak cipta dilindungi.</p>
+    <p>Email: halo@batagor-edu.id &nbsp;•&nbsp; Instagram: @batagor.edu</p>
+  </footer>
+
+  <!-- Memanggil file JavaScript eksternal -->
+  <script src="site-data.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

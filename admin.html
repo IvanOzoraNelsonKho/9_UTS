@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Batagor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <a class="admin-brand" href="index.html">Batagor<small>Pengelola</small></a>
+      <p class="sidebar-caption">Menu</p>
+      <nav class="admin-nav" aria-label="Navigasi admin">
+        <button class="admin-nav-item active" type="button" data-view="overview">Ringkasan</button>
+        <button class="admin-nav-item" type="button" data-view="quiz">Kelola kuis</button>
+        <button class="admin-nav-item" type="button" data-view="content">Konten situs</button>
+      </nav>
+      <a class="back-to-site" href="index.html">Buka situs</a>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-header">
+        <h1 id="pageHeading">Ringkasan</h1>
+        <span id="storageStatus" class="storage-status" role="status"><i aria-hidden="true"></i><span class="visually-hidden">Tersimpan di browser ini</span></span>
+      </header>
+
+      <section id="view-overview" class="admin-view active">
+        <span id="questionMetric" hidden>0</span>
+        <span id="contentMetric" hidden>0</span>
+        <section class="overview-quick">
+          <h2>Pengelolaan</h2>
+          <div class="quick-grid">
+            <button class="quick-link" type="button" data-view="quiz"><strong>Bank soal kuis</strong><small>Tambah, ubah, atau hapus pertanyaan</small></button>
+            <button class="quick-link" type="button" data-view="content"><strong>Konten halaman</strong><small>Perbarui teks Indonesia dan Inggris</small></button>
+          </div>
+        </section>
+
+        <section class="managed-content">
+          <div class="managed-heading"><h2>Bagian konten</h2><button type="button" data-view="content">Edit teks</button></div>
+          <div class="managed-content-grid">
+            <button type="button" data-view="content"><strong>Beranda</strong><span>Judul dan pengantar</span></button>
+            <button type="button" data-view="content"><strong>Tentang Batagor</strong><span>Pengertian dan deskripsi</span></button>
+            <button type="button" data-view="content"><strong>Sejarah Batagor</strong><span>Judul dan paragraf pembuka</span></button>
+          </div>
+        </section>
+
+      </section>
+
+      <section id="view-quiz" class="admin-view" hidden>
+        <div class="section-heading-row">
+          <button id="addQuestion" class="button-primary" type="button">Tambah soal</button>
+        </div>
+
+        <div class="quiz-admin-layout">
+          <section class="question-list-panel">
+            <div class="list-panel-header"><strong>Daftar pertanyaan</strong><span id="questionCount" class="count-badge">0</span></div>
+            <div id="questionList" class="question-list"></div>
+          </section>
+
+          <form id="questionForm" class="question-form">
+            <div class="form-topline"><span id="editorLabel" class="eyebrow">Pertanyaan</span><button id="deleteQuestion" class="button-danger" type="button">Hapus soal</button></div>
+            <div class="language-fields">
+              <label class="field-label">Pertanyaan <span>ID</span><textarea name="questionId" rows="2" required></textarea></label>
+              <label class="field-label">Question <span>EN</span><textarea name="questionEn" rows="2" required></textarea></label>
+            </div>
+            <div class="answers-heading"><h3>Pilihan jawaban</h3><p>Pilih jawaban yang benar.</p></div>
+            <div class="option-list">
+              <div class="option-row"><label class="answer-radio" aria-label="Tandai pilihan 1 sebagai jawaban benar"><input type="radio" name="answer" value="0" required><span>A</span></label><label class="field-label">Pilihan A <span>ID</span><input name="optionId0" required></label><label class="field-label">Option A <span>EN</span><input name="optionEn0" required></label></div>
+              <div class="option-row"><label class="answer-radio" aria-label="Tandai pilihan 2 sebagai jawaban benar"><input type="radio" name="answer" value="1"><span>B</span></label><label class="field-label">Pilihan B <span>ID</span><input name="optionId1" required></label><label class="field-label">Option B <span>EN</span><input name="optionEn1" required></label></div>
+              <div class="option-row"><label class="answer-radio" aria-label="Tandai pilihan 3 sebagai jawaban benar"><input type="radio" name="answer" value="2"><span>C</span></label><label class="field-label">Pilihan C <span>ID</span><input name="optionId2" required></label><label class="field-label">Option C <span>EN</span><input name="optionEn2" required></label></div>
+              <div class="option-row"><label class="answer-radio" aria-label="Tandai pilihan 4 sebagai jawaban benar"><input type="radio" name="answer" value="3"><span>D</span></label><label class="field-label">Pilihan D <span>ID</span><input name="optionId3" required></label><label class="field-label">Option D <span>EN</span><input name="optionEn3" required></label></div>
+            </div>
+            <div class="form-actions"><p id="questionStatus" class="form-status" role="status"></p><button class="button-primary" type="submit">Simpan soal</button></div>
+          </form>
+        </div>
+      </section>
+
+      <section id="view-content" class="admin-view" hidden>
+        <form id="contentForm" class="content-form">
+          <section class="content-group">
+            <div class="content-group-heading"><div><h3>Beranda</h3><p>Judul dan pengantar pembuka</p></div></div>
+            <div class="language-fields"><label class="field-label">Judul <span>ID</span><input data-content-input="homeTitle" data-lang="id" required></label><label class="field-label">Title <span>EN</span><input data-content-input="homeTitle" data-lang="en" required></label></div>
+            <div class="language-fields"><label class="field-label">Pengantar <span>ID</span><textarea data-content-input="homeIntro" data-lang="id" rows="3" required></textarea></label><label class="field-label">Introduction <span>EN</span><textarea data-content-input="homeIntro" data-lang="en" rows="3" required></textarea></label></div>
+          </section>
+          <section class="content-group">
+            <div class="content-group-heading"><div><h3>Tentang Batagor</h3><p>Bagian pengertian</p></div></div>
+            <div class="language-fields"><label class="field-label">Judul <span>ID</span><input data-content-input="aboutTitle" data-lang="id" required></label><label class="field-label">Title <span>EN</span><input data-content-input="aboutTitle" data-lang="en" required></label></div>
+            <div class="language-fields"><label class="field-label">Deskripsi <span>ID</span><textarea data-content-input="aboutIntro" data-lang="id" rows="4" required></textarea></label><label class="field-label">Description <span>EN</span><textarea data-content-input="aboutIntro" data-lang="en" rows="4" required></textarea></label></div>
+          </section>
+          <section class="content-group">
+            <div class="content-group-heading"><div><h3>Sejarah Batagor</h3><p>Judul dan paragraf pembuka</p></div></div>
+            <div class="language-fields"><label class="field-label">Judul <span>ID</span><input data-content-input="historyTitle" data-lang="id" required></label><label class="field-label">Title <span>EN</span><input data-content-input="historyTitle" data-lang="en" required></label></div>
+            <div class="language-fields"><label class="field-label">Pengantar <span>ID</span><textarea data-content-input="historyIntro" data-lang="id" rows="4" required></textarea></label><label class="field-label">Introduction <span>EN</span><textarea data-content-input="historyIntro" data-lang="en" rows="4" required></textarea></label></div>
+          </section>
+          <div class="form-actions content-actions"><p id="contentStatus" class="form-status" role="status"></p><button id="resetContent" class="button-secondary" type="button">Pulihkan teks awal</button><button class="button-primary" type="submit">Simpan konten</button></div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="site-data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
